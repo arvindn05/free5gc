@@ -109,10 +109,11 @@ UPF_PID=$(pgrep -P $SUDO_UPF_PID)
 PID_LIST+=($SUDO_UPF_PID $UPF_PID)
 
 mongo --eval "db.NfProfile.drop();db.applicationData.influenceData.subsToNotify.drop();db.applicationData.subsToNotify.drop();db.policyData.subsToNotify.drop();db.exposureData.subsToNotify.drop()" free5gc
-mongosh --eval "db.NfProfile.drop();db.applicationData.influenceData.subsToNotify.drop();db.applicationData.subsToNotify.drop();db.policyData.subsToNotify.drop();db.exposureData.subsToNotify.drop()" free5gc
+#mongosh --eval "db.NfProfile.drop();db.applicationData.influenceData.subsToNotify.drop();db.applicationData.subsToNotify.drop();db.policyData.subsToNotify.drop();db.exposureData.subsToNotify.drop()" free5gc
 sleep 0.1
 
-NF_LIST="nrf amf smf udr pcf udm nssf ausf"
+#NF_LIST="nrf amf smf udr pcf udm nssf ausf"
+NF_LIST=""
 
 export GIN_MODE=release
 
